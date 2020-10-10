@@ -1,14 +1,16 @@
-class ProgramingLanguage
-attr_reader :name
+# frozen_string_literal: true
 
-  def initialize (name = 'Ruby')
+class ProgramingLanguage
+  attr_reader :name
+
+  def initialize(name = 'Ruby')
     @name = name
   end
 end
 
 RSpec.describe ProgramingLanguage do
   let(:language) { ProgramingLanguage.new('Python') }
-  
+
   it 'should store the name of the language' do
     expect(language.name).to eq('Python')
   end
